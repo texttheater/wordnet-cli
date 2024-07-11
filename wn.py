@@ -25,7 +25,7 @@ def noncanonical_name(lemma, pos):
     synsets = wordnet31.synsets(lemma.name(), pos=pos)
     for i, s in enumerate(synsets, start=1):
         if s == lemma.synset():
-            return f'{lemma.name()}.v.{i:02}'
+            return f'{lemma.name()}.{pos}.{i:02}'
 
 
 if __name__ == '__main__':
